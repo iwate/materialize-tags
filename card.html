@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <title>Materialize</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <md-container>
+      <md-row>
+        <md-col s="12" m="6">
+          <md-card color="blue-grey darken-1">
+            <md-card-content title="Card Title" text-color="white-text">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </md-card-content>
+            <md-card-action>
+              <a href="#">This is a link</a>
+              <a href="#">This is a link</a>
+            </md-card-action>
+          </md-card>
+        </md-col>
+      </md-row>
+      <md-row>
+        <md-col s="12" m="6">
+          <md-card>
+            <md-card-image src="http://dummyimage.com/600x400/000/fff" title="Card Title"></md-card-image>
+            <md-card-content>
+              <p>
+                I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.
+              </p>
+            </md-card-content>
+            <md-card-action>
+              <a href="#">This is a link</a>
+            </md-card-action>
+          </md-card>
+        </md-col>
+      </md-row>
+      <md-row>
+        <md-col s="12" m="6">
+          <md-card horizontal="true">
+            <md-card-image src="http://dummyimage.com/100x190/000/fff"></md-card-image>
+            <md-card-stacked>
+              <md-card-content>
+                <p>
+                  I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.
+                </p>
+              </md-card-content>
+              <md-card-action>
+                <a href="#">This is a link</a>
+              </md-card-action>
+            </md-card-stacked>
+          </md-card>
+        </md-col>
+      </md-row>
+      <md-row>
+        <md-col s="12" m="6">
+          <md-card>
+            <md-card-image waves="true" waves-type="block" waves-color="light" activator="true" src="http://dummyimage.com/600x400/000/fff"></md-card-image>
+            <md-card-content title="Card Title" title-color="grey-text text-darken-4" activator="true">
+              <p><a href="#">This is a link</a></p>
+            </md-card-content>
+            <md-card-reveal title="Card Title" title-color="grey-text text-darken-4">
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </md-card-reveal>
+          </md-card>
+        </md-col>
+      </md-row>
+      <md-row>
+        <md-col s="12" m="6">
+          <md-card-panel>
+            I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+          </md-card-panel>
+          </md-card>
+        </md-col>
+      </md-row>
+    </md-container>
+    <script src="/tags/md-card.tag.html" type="riot/tag"></script>
+    <script src="/tags/md-card-image.tag.html" type="riot/tag"></script>
+    <script src="/tags/md-card-content.tag.html" type="riot/tag"></script>
+    <script src="/tags/md-card-reveal.tag.html" type="riot/tag"></script>
+    <script src="/tags/md-card-stacked.tag.html" type="riot/tag"></script>
+    <script src="/tags/md-card-action.tag.html" type="riot/tag"></script>
+    <script src="/tags/md-card-panel.tag.html" type="riot/tag"></script>
+    <script src="/tags/md-container.tag.html" type="riot/tag"></script>     
+    <script src="/tags/md-col.tag.html" type="riot/tag"></script> 
+    <script src="/tags/md-row.tag.html" type="riot/tag"></script> 
+    <script src="/node_modules/riot/riot+compiler.min.js"></script>
+    <script type="text/javascript">
+      riot.compile(function() {
+          riot.mount('*');
+      });
+    </script>
+  </body>
+</html>

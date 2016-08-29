@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Materialize</title>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <md-container>
+      <md-row>
+        <md-col s="1">1</md-col>
+        <md-col s="1">2</md-col>
+        <md-col s="1">3</md-col>
+        <md-col s="1">4</md-col>
+        <md-col s="1">5</md-col>
+        <md-col s="1">6</md-col>
+        <md-col s="1">7</md-col>
+        <md-col s="1">8</md-col>
+        <md-col s="1">9</md-col>
+        <md-col s="1">10</md-col>
+        <md-col s="1">11</md-col>
+        <md-col s="1">12</md-col>     
+      </md-row>
+      <md-row>
+        <md-col s="12">
+          <span class="flow-text">This div is 12-columns wide on all screen sizes</span>
+        </md-col>
+        <md-col s="6" offset-s="6">
+          <span class="flow-text">6-columns (offset-by-6)</span>
+        </md-col>
+      </md-row>
+      <md-row>
+        <md-divider></md-divider>
+        <md-section>
+          <h5>Section 1</h5>
+          <p>Stuff</p>
+        </md-section>
+
+        <md-divider></md-divider>
+        <md-section>
+          <h5>Section 2</h5>
+          <p>Stuff</p>
+        </md-section>
+
+        <md-divider></md-divider>
+        <md-section>
+          <h5>Section 3</h5>
+          <p>Stuff</p>
+        </md-section>
+        
+      </md-row>
+    </md-container>
+
+    <script src="/tags/md-container.tag.html" type="riot/tag"></script>     
+    <script src="/tags/md-row.tag.html" type="riot/tag"></script> 
+    <script src="/tags/md-col.tag.html" type="riot/tag"></script> 
+    <script src="/tags/md-divider.tag.html" type="riot/tag"></script>
+    <script src="/tags/md-section.tag.html" type="riot/tag"></script> 
+    <script src="/node_modules/riot/riot+compiler.min.js"></script>
+    <script type="text/javascript">
+      riot.compile(function() {
+          riot.mount('*');
+      });
+    </script>
+  </body>
+</html>

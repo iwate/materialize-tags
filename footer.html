@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Materialize</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"  rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <md-footer>
+      <yield to="content">
+        <md-col s="12" l="6">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </md-col>
+        <md-col s="12" l="4" offset-l="2">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </md-col>
+      </yield>
+      <yield to="copyright">
+        © 2014 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </yield>
+    </md-footer>
+    <script src="/tags/md-footer.tag.html" type="riot/tag"></script>
+    <script src="/tags/md-col.tag.html" type="riot/tag"></script>
+    <script src="/node_modules/riot/riot+compiler.min.js"></script>
+    <script type="text/javascript">
+      riot.compile(function() {
+          riot.mount('*');
+      });
+    </script>
+  </body>
+</html>

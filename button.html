@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Materialize</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  </head>
+  <body>
+    <md-container>
+      <md-row>
+        <md-col s="12">
+          <md-button                 waves="light" left-icon="cloud" text="button"></md-button>
+          <md-button type="flat"     waves="teal"  left-icon="cloud" text="button"></md-button>
+          <md-button type="floating" waves="light" left-icon="cloud" large="true"></md-button>
+        </md-col>
+      </md-row>
+      <md-row>
+        <md-col s="12">
+          <div style="position: relative">
+            <md-actions toggle="click">
+              <md-button type="floating" icon="menu" color="red" large="true"></md-button>
+              <ul>
+                <li><md-button type="floating" icon="insert_chart" color="red"></md-button></li>
+                <li><md-button type="floating" icon="format_quote" color="yellow darken-1"></md-button></li>
+                <li><md-button type="floating" icon="publish"      color="green"></md-button></li>
+                <li><md-button type="floating" icon="attach_file"  color="blue"></md-button></li>
+              </ul>
+            </md-actions>
+          </div>
+        </md-col>
+      </md-row>
+      <md-row>
+        <md-col s="12">
+          <md-actions dir="vertical" toggle="click">
+            <md-button type="floating" icon="menu" color="red" large="true"></md-button>
+            <ul>
+              <li><md-button type="floating" icon="insert_chart" color="red"></md-button></li>
+              <li><md-button type="floating" icon="format_quote" color="yellow darken-1"></md-button></li>
+              <li><md-button type="floating" icon="publish"      color="green"></md-button></li>
+              <li><md-button type="floating" icon="attach_file"  color="blue"></md-button></li>
+            </ul>
+          </md-actions>
+        </md-col>
+      </md-row>
+    </md-container>
+    <script src="/tags/md-button.tag.html" type="riot/tag"></script>
+    <script src="/tags/md-actions.tag.html" type="riot/tag"></script>
+    <script src="/tags/md-container.tag.html" type="riot/tag"></script>     
+    <script src="/tags/md-col.tag.html" type="riot/tag"></script> 
+    <script src="/tags/md-row.tag.html" type="riot/tag"></script> 
+    <script src="/node_modules/riot/riot+compiler.min.js"></script>
+    <script type="text/javascript">
+      riot.compile(function() {
+          riot.mount('*');
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  </body>
+</html>

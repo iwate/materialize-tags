@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Materialize</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"  rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <md-input id="firstname" name="first" validator="^[a-z]*$" label="First Name" icon="mode_edit" disabled="true"></md-input>
+    <md-input id="firstname" name="first" validator="^[a-z]*$" label="First Name" icon="mode_edit" length="10"></md-input>
+    <md-input type="textarea" id="firstname" name="first" label="First Name"></md-input>
+    <md-input type="date" id="pubdate" name="pubdate" label="Publish Date"></md-input>
+    <md-input type="file" id="files" name="files" label="Upload Files" multiple="true"></md-input>
+    <script src="/tags/md-input.tag.html" type="riot/tag"></script>
+    <script src="/node_modules/riot/riot+compiler.min.js"></script>
+    <script type="text/javascript">
+      riot.compile(function() {
+          riot.mount('*');
+      });
+    </script>
+  </body>
+</html>

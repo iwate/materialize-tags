@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Materialize</title>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <md-collection>
+      <md-collection-item>Alan<md-badge>1</md-badge></md-collection-item>
+      <md-collection-item>Alan<md-badge new="true">4</md-badge></md-collection-item>
+      <md-collection-item href="http://google.com">Alan</md-collection-item>
+      <md-collection-item>Alan<md-badge caption="Custom Caption">14</md-badge></md-collection-item>
+    </md-collection>
+
+    <script src="/tags/md-collection.tag.html" type="riot/tag"></script>     
+    <script src="/tags/md-collection-item.tag.html" type="riot/tag"></script> 
+    <script src="/tags/md-badge.tag.html" type="riot/tag"></script>
+    <script src="/node_modules/riot/riot+compiler.min.js"></script>
+    <script type="text/javascript">
+      riot.compile(function() {
+          riot.mount('*');
+      });
+    </script>
+  </body>
+</html>
