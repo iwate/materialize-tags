@@ -11,7 +11,7 @@
     var self = this;
     self.brand = opts.brand || '';
     self.pos = opts.position;
-    self.container = typeof opts.container === false ? '' : 'container';
+    self.container = opts.container === false || opts.container === 'false' ? '' : 'container';
     if(opts.fixed){
       this.root.classList.add('navbar-fixed');
     }

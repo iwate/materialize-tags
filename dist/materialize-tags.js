@@ -178,7 +178,7 @@ riot.tag2('md-nav', '<nav> <div class="nav-wrapper"> <div class="{container}"> <
     var self = this;
     self.brand = opts.brand || '';
     self.pos = opts.position;
-    self.container = typeof opts.container === false ? '' : 'container';
+    self.container = opts.container === false || opts.container === 'false' ? '' : 'container';
     if(opts.fixed){
       this.root.classList.add('navbar-fixed');
     }
@@ -219,6 +219,14 @@ riot.tag2('md-preloader', '<div class="preloader-wrapper big active"> <div class
 riot.tag2('md-row', '<div class="row"> <yield></yield> </div>', '', '', function(opts) {
 });
 riot.tag2('md-section', '<div class="section"> <yield></yield> </div>', '', '', function(opts) {
+});
+riot.tag2('md-sidenav', '<ul id="slide-out" class="side-nav {fixed}"> <li class="logo" if="{logo||logoImage}"> <a id="logo-container" href="{logoLink}" class="brand-logo"> <img riot-src="{logoImage}"> </a> </li> <yield></yield> </ul>', 'md-sidenav.fixed ~,[riot-tag="md-sidenav"].fixed ~,[data-is="md-sidenav"].fixed ~{ } md-sidenav.fixed ~ header,[riot-tag="md-sidenav"].fixed ~ header,[data-is="md-sidenav"].fixed ~ header,md-sidenav.fixed ~ main,[riot-tag="md-sidenav"].fixed ~ main,[data-is="md-sidenav"].fixed ~ main,md-sidenav.fixed ~footer,[riot-tag="md-sidenav"].fixed ~footer,[data-is="md-sidenav"].fixed ~footer{ padding-left: 300px; } md-sidenav .logo,[riot-tag="md-sidenav"] .logo,[data-is="md-sidenav"] .logo{ text-align: center; margin-top: 32px; margin-bottom: 80px; } @media only screen and (max-width : 992px) { md-sidenav.fixed ~ header,[riot-tag="md-sidenav"].fixed ~ header,[data-is="md-sidenav"].fixed ~ header,md-sidenav.fixed ~ main,[riot-tag="md-sidenav"].fixed ~ main,[data-is="md-sidenav"].fixed ~ main,md-sidenav.fixed ~ footer,[riot-tag="md-sidenav"].fixed ~ footer,[data-is="md-sidenav"].fixed ~ footer{ padding-left: 0; } } @media only screen and (min-width: 993px){ md-sidenav.fixed ~ header .container,[riot-tag="md-sidenav"].fixed ~ header .container,[data-is="md-sidenav"].fixed ~ header .container,md-sidenav.fixed ~ main .container,[riot-tag="md-sidenav"].fixed ~ main .container,[data-is="md-sidenav"].fixed ~ main .container,md-sidenav.fixed ~ footer .container,[riot-tag="md-sidenav"].fixed ~ footer .container,[data-is="md-sidenav"].fixed ~ footer .container{ width: 85%; } }', '', function(opts) {
+    var self = this;
+    self.fixed = opts.fixed ? 'fixed' : '';
+    self.logo = opts.logo;
+    self.logoImage = opts.logoImage;
+    self.logoLink = opts.logoLink || 'javascript:void(0);';
+    this.root.classList.add(self.fixed);
 });
 riot.tag2('md-tags', '<div class="chips chips-placeholder"></div>', 'md-tags .chips-placeholder input,[riot-tag="md-tags"] .chips-placeholder input,[data-is="md-tags"] .chips-placeholder input{ margin-bottom: 0px; }', '', function(opts) {
     this.on("updated", function(){
