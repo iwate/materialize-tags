@@ -2,7 +2,7 @@
 [Demo](https://iwate.github.io/materialize-tags/)
 
 ## What's Materialize Tags?
-Materialize Tags is a component for Riot.js. This is transformed tag from Materialize and is provided materiali design easly for Riot.js
+Materialize Tags is a component for Riot.js. This is transformed tag from [Materialize](http://materializecss.com/) and is provided materiali design easly for Riot.js
 
 ## This is experimental yet
 You must don't use in prodution. because this component has a concept = "Tag Based" which is mean use nested tags. however Riot.js is weak nested tags.
