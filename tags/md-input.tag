@@ -37,7 +37,13 @@
     self.multiple = opts.multiple || false;
     self.onKeyup = function(e){
       if(!!self.validator){
-        self.state = e.target.value.match(self.validator) ? 'valid' : 'invalid';
+        if(!e.target.value.match(self.validator) || (self.length && e.target.value.length > self.length)){
+          e.target.classList.add('invalid')
+          e.target.classList.remove('valid')
+        } else {
+          e.target.classList.add('valid')          
+          e.target.classList.remove('invalid')
+        }
       }
     }
     self.isTextarea = self.type == 'textarea';
@@ -54,12 +60,7 @@
         });
       })
     }
-    if((self.isOther || self.isTextarea) && self.length){
-      this.on('updated', function(){
-        $('input, textarea', this.root).characterCounter();
-      })
-    }
-    
+
     function unique(){
       if(window.__md_unique_index)
         window.__md_unique_index = 0;

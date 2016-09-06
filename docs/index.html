@@ -1,52 +1,75 @@
 <html>
   <head>
-    <title>Materialize Riot</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-      html {
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-      }
-    </style>
+    <title>About | Materialize Tags</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="//fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/solarized-light.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
-    
-    <md-sidenav logo-image="http://materializecss.com/res/materialize.svg" logo-link="http://materializecss.com/" fixed="true">
-      <ul class="collapsible collapsible-accordion">
-        <li class="bold"><a href="grid.html" class="waves-effect waves-teal">About</a></li>
-        <li class="bold"><a href="grid.html" class="waves-effect waves-teal">Getting Started</a></li>
-        <li class="bold">
-          <a class="collapsible-header waves-effect waves-teal">Tags</a>
-          <div class="collapsible-body">
-            <ul>
-              <li><a href="grid.html">Grids</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-            
+    <md-sidenav logo-text="Materialize Tags" logo-link="http://materializecss.com/" logo-color="red-text text-lighten-2" fixed="true">
+      <md-collapsible items="{[
+        { type: 'link', href: 'index.html', bold: true, text: 'About' },
+        { type: 'link', href: 'index.html', bold: true, text: 'Getting Started' },
+        { type: 'header', bold: true, text: 'Tags', nested: [
+           { type: 'link', href: 'grids.html', text: 'Grids' },
+           { type: 'link', href: 'buttons.html', text: 'Buttons' },
+           { type: 'link', href: 'forms.html', text: 'Forms' },
+           { type: 'link', href: 'cards.html', text: 'Cards' },
+           { type: 'link', href: 'chips.html', text: 'Chips' },
+           { type: 'link', href: 'badges.html', text: 'Badges' },
+           { type: 'link', href: 'nav.html', text: 'Nav' },
+           { type: 'link', href: 'footer.html', text: 'Footer' }
+        ]}
+      ]}">
+      </md-collapsible>
     </md-sidenav>
     <header>
-      <md-nav brand="Materialize Tags"></md-nav>
+      <md-nav brand="About"></md-nav>
     </header>
     <main>
       <md-container>
         <md-row>
           <md-col s="12">
-            <h2>What's Materialize Tags?</h2>
+            <article>
+              <h2>What's Materialize Tags?</h2>
+              <p>Materialize Tags is a component for Riot.js. This is transformed tag from Materialize and is provided materiali design easly for Riot.js</p>            
+              <h2>This is experimental yet</h2>
+              <p>
+                You must don't use in prodution. because this component has a concept = "Tag Based" which is mean use nested tags. however Riot.js is weak nested tags.
+              </p>
+            </article>
           </md-col>
         </md-row>
       </md-container>
     </main>
+    <md-footer>
+      <yield to="content">
+        <md-col s="12" l="6">
+          <h5 class="white-text">License</h5>
+          <p class="grey-text text-lighten-4">MIT</p>
+        </md-col>
+        <md-col s="12" l="4" offset-l="2">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/iwate/materialize-tags">Github</a></li>
+          </ul>
+        </md-col>
+      </yield>
+      <yield to="copyright">
+        © 2016 Materialize Tags
+        <a class="grey-text text-lighten-4 right" href="#!">License</a>
+      </yield>
+    </md-footer>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script src="https://cdn.jsdelivr.net/riot/2.6/riot.min.js"></script>
-    <script src="../dist/materialize-tags.js"></script>
+    <script src="materialize-tags.js"></script>
     <script type="text/javascript">
       riot.mount('*');
-      // $(".button-collapse").sideNav();
     </script>
   </body>
 </html>

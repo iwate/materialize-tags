@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Footer | Materialize Tags</title>
+    <title>Badges | Materialize Tags</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link href="//fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,44 +15,38 @@
         { type: 'link', href: 'index.html', bold: true, text: 'About' },
         { type: 'link', href: 'index.html', bold: true, text: 'Getting Started' },
         { type: 'header', bold: true, text: 'Tags', nested: [
-           { type: 'link', href: 'grids.html', text: 'Grids' },
+           { type: 'link', href: 'grids.html', text: 'Grids', active: true },
            { type: 'link', href: 'buttons.html', text: 'Buttons' },
            { type: 'link', href: 'forms.html', text: 'Forms' },
            { type: 'link', href: 'cards.html', text: 'Cards' },
            { type: 'link', href: 'chips.html', text: 'Chips' },
            { type: 'link', href: 'badges.html', text: 'Badges' },
            { type: 'link', href: 'nav.html', text: 'Nav' },
-           { type: 'link', href: 'footer.html', text: 'Footer', active: true }
+           { type: 'link', href: 'footer.html', text: 'Footer' }
         ]}
       ]}">
       </md-collapsible>
     </md-sidenav>
     <header>
-      <md-nav brand="Footer"></md-nav>
+      <md-nav brand="Badges"></md-nav>
     </header>
     <main>
       <md-container>
         <md-row>
           <md-col s="12">
             <article>
-<pre><code class="xml">&lt;md-footer&gt;
-  &lt;yield to=&quot;content&quot;&gt;
-    &lt;md-col s=&quot;12&quot; l=&quot;6&quot;&gt;
-      &lt;h5 class=&quot;white-text&quot;&gt;License&lt;/h5&gt;
-      &lt;p class=&quot;grey-text text-lighten-4&quot;&gt;MIT&lt;/p&gt;
-    &lt;/md-col&gt;
-    &lt;md-col s=&quot;12&quot; l=&quot;4&quot; offset-l=&quot;2&quot;&gt;
-      &lt;h5 class=&quot;white-text&quot;&gt;Links&lt;/h5&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a class=&quot;grey-text text-lighten-3&quot; href=&quot;#!&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/md-col&gt;
-  &lt;/yield&gt;
-  &lt;yield to=&quot;copyright&quot;&gt;
-    &copy; 2016 Materialize Tags
-    &lt;a class=&quot;grey-text text-lighten-4 right&quot; href=&quot;#!&quot;&gt;License&lt;/a&gt;
-  &lt;/yield&gt;
-&lt;/md-footer&gt;</code></pre>
+              <md-collection>
+                <md-collection-item>Alan<md-badge>1</md-badge></md-collection-item>
+                <md-collection-item>Alan<md-badge new="true">4</md-badge></md-collection-item>
+                <md-collection-item href="http://google.com">Alan</md-collection-item>
+                <md-collection-item>Alan<md-badge caption="Custom Caption">14</md-badge></md-collection-item>
+              </md-collection>
+              <pre><code class="xml">&lt;md-collection&gt;
+  &lt;md-collection-item&gt;Alan&lt;md-badge&gt;1&lt;/md-badge&gt;&lt;/md-collection-item&gt;
+  &lt;md-collection-item&gt;Alan&lt;md-badge new=&quot;true&quot;&gt;4&lt;/md-badge&gt;&lt;/md-collection-item&gt;
+  &lt;md-collection-item href=&quot;http://google.com&quot;&gt;Alan&lt;/md-collection-item&gt;
+  &lt;md-collection-item&gt;Alan&lt;md-badge caption=&quot;Custom Caption&quot;&gt;14&lt;/md-badge&gt;&lt;/md-collection-item&gt;
+&lt;/md-collection&gt;</code></pre>
             </article>
           </md-col>
         </md-row>

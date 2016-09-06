@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <title>Buttons | Materialize Tags</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="//fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/solarized-light.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <md-sidenav logo-text="Materialize Tags" logo-link="http://materializecss.com/" logo-color="red-text text-lighten-2" fixed="true">
+      <md-collapsible items="{[
+        { type: 'link', href: 'index.html', bold: true, text: 'About'},
+        { type: 'link', href: 'index.html', bold: true, text: 'Getting Started' },
+        { type: 'header', bold: true, text: 'Tags', nested: [
+           { type: 'link', href: 'grids.html', text: 'Grids' },
+           { type: 'link', href: 'buttons.html', text: 'Buttons', active: true },
+           { type: 'link', href: 'forms.html', text: 'Forms' },
+           { type: 'link', href: 'cards.html', text: 'Cards' },
+           { type: 'link', href: 'chips.html', text: 'Chips' },
+           { type: 'link', href: 'badges.html', text: 'Badges' },
+           { type: 'link', href: 'nav.html', text: 'Nav' },
+           { type: 'link', href: 'footer.html', text: 'Footer' }
+        ]}
+      ]}">
+      </md-collapsible>
+    </md-sidenav>
+    <header>
+      <md-nav brand="Buttons"></md-nav>
+    </header>
+    <main>
+      <md-container>
+        <md-row>
+          <md-col s="12">
+            <article>
+              <h2>Raised</h2>
+              <md-button                 waves="light" text="button"></md-button>
+              <md-button                 waves="light" left-icon="cloud" text="button"></md-button>
+              <md-button                 waves="light" right-icon="cloud" text="button"></md-button>
+              <pre><code class="xml">&lt;md-button                 waves=&quot;light&quot; text=&quot;button&quot;&gt;&lt;/md-button&gt;
+&lt;md-button                 waves=&quot;light&quot; left-icon=&quot;cloud&quot; text=&quot;button&quot;&gt;&lt;/md-button&gt;
+&lt;md-button                 waves=&quot;light&quot; right-icon=&quot;cloud&quot; text=&quot;button&quot;&gt;&lt;/md-button&gt;</code></pre>
+<h2>Floating</h2>
+              <div style="position: relative; width: 27rem;padding-bottom: 7rem;">
+                <md-actions toggle="click">
+                  <md-button type="floating" icon="menu" color="red" large="true"></md-button>
+                  <ul>
+                    <li><md-button type="floating" icon="insert_chart" color="red"></md-button></li>
+                    <li><md-button type="floating" icon="format_quote" color="yellow darken-1"></md-button></li>
+                    <li><md-button type="floating" icon="publish"      color="green"></md-button></li>
+                    <li><md-button type="floating" icon="attach_file"  color="blue"></md-button></li>
+                  </ul>
+                </md-actions>
+              </div>
+              <pre><code class="xml">&lt;md-actions toggle=&quot;click&quot;&gt;
+  &lt;md-button type=&quot;floating&quot; icon=&quot;menu&quot; color=&quot;red&quot; large=&quot;true&quot;&gt;&lt;/md-button&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;md-button type=&quot;floating&quot; icon=&quot;insert_chart&quot; color=&quot;red&quot;&gt;&lt;/md-button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;md-button type=&quot;floating&quot; icon=&quot;format_quote&quot; color=&quot;yellow darken-1&quot;&gt;&lt;/md-button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;md-button type=&quot;floating&quot; icon=&quot;publish&quot;      color=&quot;green&quot;&gt;&lt;/md-button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;md-button type=&quot;floating&quot; icon=&quot;attach_file&quot;  color=&quot;blue&quot;&gt;&lt;/md-button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/md-actions&gt;</code></pre>
+              <div style="position: relative; width: 27rem;padding-bottom: 7rem;">
+                <md-actions toggle="click" dir="vertical">
+                  <md-button type="floating" icon="menu" color="red" large="true"></md-button>
+                  <ul>
+                    <li><md-button type="floating" icon="insert_chart" color="red"></md-button></li>
+                    <li><md-button type="floating" icon="format_quote" color="yellow darken-1"></md-button></li>
+                    <li><md-button type="floating" icon="publish"      color="green"></md-button></li>
+                    <li><md-button type="floating" icon="attach_file"  color="blue"></md-button></li>
+                  </ul>
+                </md-actions>
+              </div>
+              <pre><code class="xml">&lt;md-actions toggle=&quot;click&quot; dir=&quot;vertical&quot;&gt;
+  &lt;md-button type=&quot;floating&quot; icon=&quot;menu&quot; color=&quot;red&quot; large=&quot;true&quot;&gt;&lt;/md-button&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;md-button type=&quot;floating&quot; icon=&quot;insert_chart&quot; color=&quot;red&quot;&gt;&lt;/md-button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;md-button type=&quot;floating&quot; icon=&quot;format_quote&quot; color=&quot;yellow darken-1&quot;&gt;&lt;/md-button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;md-button type=&quot;floating&quot; icon=&quot;publish&quot;      color=&quot;green&quot;&gt;&lt;/md-button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;md-button type=&quot;floating&quot; icon=&quot;attach_file&quot;  color=&quot;blue&quot;&gt;&lt;/md-button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/md-actions&gt;</code></pre>
+              <h2>Flat</h2>
+              <md-button type="flat" waves="teal" text="button">Button</md-button>
+              <pre><code class="xml">&lt;md-button type=&quot;flat&quot; waves=&quot;teal&quot; text=&quot;button&quot;&gt;Button&lt;/md-button&gt;</code></pre>    
+              <h2>Submit</h2>
+              <md-button waves="teal" text="button" submit="create">Submit</md-button>
+              <pre><code class="xml">&lt;md-button waves=&quot;teal&quot; text=&quot;button&quot; submit=&quot;create&quot;&gt;Submit&lt;/md-button&gt;</code></pre>                 
+            </article>
+          </md-col>
+        </md-row>
+      </md-container>
+    </main>
+    <md-footer>
+      <yield to="content">
+        <md-col s="12" l="6">
+          <h5 class="white-text">License</h5>
+          <p class="grey-text text-lighten-4">MIT</p>
+        </md-col>
+        <md-col s="12" l="4" offset-l="2">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/iwate/materialize-tags">Github</a></li>
+          </ul>
+        </md-col>
+      </yield>
+      <yield to="copyright">
+        © 2016 Materialize Tags
+        <a class="grey-text text-lighten-4 right" href="#!">License</a>
+      </yield>
+    </md-footer>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/riot/2.6/riot.min.js"></script>
+    <script src="materialize-tags.js"></script>
+    <script type="text/javascript">
+      riot.mount('*');
+    </script>
+  </body>
+</html>

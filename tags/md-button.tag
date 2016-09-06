@@ -5,7 +5,7 @@
     {text}
     <i class="material-icons right" if="{rightIcon}">{rightIcon}</i>    
   </a>
-  <button class="{klass}" if="{submitName}">
+  <button class="{klass}" type="submit" name="{submitName}" if="{submitName}">
     <i class="material-icons left" if="{leftIcon}">{leftIcon}</i>
     {text}
     <i class="material-icons right" if="{rightIcon}">{rightIcon}</i> 

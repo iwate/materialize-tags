@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <title>Grids | Materialize Tags</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="//fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/solarized-light.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <md-sidenav logo-text="Materialize Tags" logo-link="http://materializecss.com/" logo-color="red-text text-lighten-2" fixed="true">
+      <md-collapsible items="{[
+        { type: 'link', href: 'index.html', bold: true, text: 'About'},
+        { type: 'link', href: 'index.html', bold: true, text: 'Getting Started' },
+        { type: 'header', bold: true, text: 'Tags', nested: [
+           { type: 'link', href: 'grids.html', text: 'Grids', active: true },
+           { type: 'link', href: 'buttons.html', text: 'Buttons' },
+           { type: 'link', href: 'forms.html', text: 'Forms' },
+           { type: 'link', href: 'cards.html', text: 'Cards' },
+           { type: 'link', href: 'chips.html', text: 'Chips' },
+           { type: 'link', href: 'badges.html', text: 'Badges' },
+           { type: 'link', href: 'nav.html', text: 'Nav' },
+           { type: 'link', href: 'footer.html', text: 'Footer' }
+        ]}
+      ]}">
+      </md-collapsible>
+    </md-sidenav>
+    <header>
+      <md-nav brand="Grids"></md-nav>
+    </header>
+    <main>
+      <md-container>
+        <md-row>
+          <md-col s="12">
+            <article>
+              <h2>Introduction</h2>
+              <p>TODO: this is introduction descriptions.....</p>            
+              <h2>Container</h2>
+              <pre><code class="xml">&lt;md-container&gt;...&lt;/md-container&gt;</code></pre>
+              <h2>Column</h2>
+              <md-row>
+                <md-col s="1">1</md-col>
+                <md-col s="1">2</md-col>
+                <md-col s="1">3</md-col>
+                <md-col s="1">4</md-col>
+                <md-col s="1">5</md-col>
+                <md-col s="1">6</md-col>
+                <md-col s="1">7</md-col>
+                <md-col s="1">8</md-col>
+                <md-col s="1">9</md-col>
+                <md-col s="1">10</md-col>
+                <md-col s="1">11</md-col>
+                <md-col s="1">12</md-col>     
+              </md-row>
+<pre><code class="xml">&lt;md-row&gt;
+  &lt;md-col s=&quot;1&quot;&gt;1&lt;/md-col&gt;
+  &lt;md-col s=&quot;1&quot;&gt;2&lt;/md-col&gt;
+  &lt;md-col s=&quot;1&quot;&gt;3&lt;/md-col&gt;
+  &lt;md-col s=&quot;1&quot;&gt;4&lt;/md-col&gt;
+  &lt;md-col s=&quot;1&quot;&gt;5&lt;/md-col&gt;
+  &lt;md-col s=&quot;1&quot;&gt;6&lt;/md-col&gt;
+  &lt;md-col s=&quot;1&quot;&gt;7&lt;/md-col&gt;
+  &lt;md-col s=&quot;1&quot;&gt;8&lt;/md-col&gt;
+  &lt;md-col s=&quot;1&quot;&gt;9&lt;/md-col&gt;
+  &lt;md-col s=&quot;1&quot;&gt;10&lt;/md-col&gt;
+  &lt;md-col s=&quot;1&quot;&gt;11&lt;/md-col&gt;
+  &lt;md-col s=&quot;1&quot;&gt;12&lt;/md-col&gt;     
+&lt;/md-row&gt;</code></pre>
+              <md-row>
+                <md-col s="12">
+                  <span class="flow-text">This div is 12-columns wide on all screen sizes</span>
+                </md-col>
+                <md-col s="6" offset-s="6">
+                  <span class="flow-text">6-columns (offset-by-6)</span>
+                </md-col>
+              </md-row>
+              <pre><code class="xml">&lt;md-row&gt;
+  &lt;md-col s=&quot;12&quot;&gt;
+    &lt;span class=&quot;flow-text&quot;&gt;This div is 12-columns wide on all screen sizes&lt;/span&gt;
+  &lt;/md-col&gt;
+  &lt;md-col s=&quot;6&quot; offset-s=&quot;6&quot;&gt;
+    &lt;span class=&quot;flow-text&quot;&gt;6-columns (offset-by-6)&lt;/span&gt;
+  &lt;/md-col&gt;
+&lt;/md-row&gt;</code></pre>
+              <h2>Sections</h2>
+              <md-row>
+                <md-divider></md-divider>
+                <md-section>
+                  <h5>Section 1</h5>
+                  <p>Stuff</p>
+                </md-section>
+
+                <md-divider></md-divider>
+                <md-section>
+                  <h5>Section 2</h5>
+                  <p>Stuff</p>
+                </md-section>
+
+                <md-divider></md-divider>
+                <md-section>
+                  <h5>Section 3</h5>
+                  <p>Stuff</p>
+                </md-section>
+              </md-row>
+              <pre><code class="xml">&lt;md-row&gt;
+  &lt;md-divider&gt;&lt;/md-divider&gt;
+  &lt;md-section&gt;
+    &lt;h5&gt;Section 1&lt;/h5&gt;
+    &lt;p&gt;Stuff&lt;/p&gt;
+  &lt;/md-section&gt;
+
+  &lt;md-divider&gt;&lt;/md-divider&gt;
+  &lt;md-section&gt;
+    &lt;h5&gt;Section 2&lt;/h5&gt;
+    &lt;p&gt;Stuff&lt;/p&gt;
+  &lt;/md-section&gt;
+
+  &lt;md-divider&gt;&lt;/md-divider&gt;
+  &lt;md-section&gt;
+    &lt;h5&gt;Section 3&lt;/h5&gt;
+    &lt;p&gt;Stuff&lt;/p&gt;
+  &lt;/md-section&gt;
+&lt;/md-row&gt;</code></pre>
+            </article>
+          </md-col>
+        </md-row>
+      </md-container>
+    </main>
+    <md-footer>
+      <yield to="content">
+        <md-col s="12" l="6">
+          <h5 class="white-text">License</h5>
+          <p class="grey-text text-lighten-4">MIT</p>
+        </md-col>
+        <md-col s="12" l="4" offset-l="2">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/iwate/materialize-tags">Github</a></li>
+          </ul>
+        </md-col>
+      </yield>
+      <yield to="copyright">
+        © 2016 Materialize Tags
+        <a class="grey-text text-lighten-4 right" href="#!">License</a>
+      </yield>
+    </md-footer>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/riot/2.6/riot.min.js"></script>
+    <script src="materialize-tags.js"></script>
+    <script type="text/javascript">
+      riot.mount('*');
+    </script>
+  </body>
+</html>
