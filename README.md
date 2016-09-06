@@ -1,4 +1,5 @@
 # Materialize Tags
+[Demo](https://iwate.github.io/materialize-tags/)
 
 ## What's Materialize Tags?
 Materialize Tags is a component for Riot.js. This is transformed tag from Materialize and is provided materiali design easly for Riot.js
